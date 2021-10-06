@@ -2,10 +2,18 @@ $color-primary: #15573F;
 $color-secondary: #FD9872;
 $color-tertiary: #75BC97;
 
+$color-font:#797979;
+
 @mixin for-phone-only {
     @media (max-width: 425px) {
         @content;
     }
+}
+
+
+
+body {
+    color: $color-font
 }
 
 .header {
@@ -72,6 +80,55 @@ $color-tertiary: #75BC97;
 
 }
 
-.content {}
+.content {
+    width: 70%;
+    margin: auto;
+
+    .filters {
+
+        &__cards {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            row-gap: 10px;
+            column-gap: 10px;
+            grid-template-areas: "card card card";
+        }
+
+        &__card {
+            grid-area: "card";
+        }
+
+        &__img {
+            height: 75px;
+        }
+
+        &__text {
+            width: 70%;
+            margin: 25px 0;
+        }
+
+        &__text-strong {
+            font-weight: bold;
+        }
+
+        &__options {
+            width: 75%;
+            margin: auto;
+            padding: 10px;
+            border-radius: 20px;
+            border: 1.5px solid #A8A8A8;
+            color: #A8A8A8;
+        }
+
+        select {
+            padding-right: 10px;
+        }
+
+        .invert {
+            transform: rotateY(180deg);
+        }
+    }
+}
 
 .footer {}

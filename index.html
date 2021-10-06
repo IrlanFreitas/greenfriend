@@ -26,7 +26,70 @@
         />
       </div>
     </header>
-    <main class="content"></main>
+    <main class="content">
+      <div class="content__filters filters">
+        <ul class="filters__cards">
+          <li class="filters__card">
+            <img
+              src="./assets/img/illustrations/sun.png"
+              alt=""
+              class="filters__img"
+            />
+            <p class="filters__text">
+              <strong class="filters__text-strong">1.</strong> Set the amount of
+              <strong class="filters__text-strong">sunlight</strong> your plant
+              will get.
+            </p>
+            <select class="filters__options" name="sun">
+              <option selected disabled hidden>Select...</option>
+              <option value="no">No</option>
+              <option value="low">Low</option>
+              <option value="high">High</option>
+            </select>
+          </li>
+
+          <li class="filters__card">
+            <img
+              src="./assets/img/illustrations/wateringcan.png"
+              alt=""
+              class="filters__img invert"
+            />
+            <p class="filters__text">
+              <strong class="filters__text-strong">2.</strong> How often do you
+              want to <strong class="filters__text-strong">water</strong> your
+              plant?
+            </p>
+            <select class="filters__options" name="water">
+              <option selected disabled hidden>Select...</option>
+              <option value="regularly">Regularly</option>
+              <option value="daily">Daily</option>
+              <option value="rarely">Rarely</option>
+            </select>
+          </li>
+
+          <li class="filters__card">
+            <img
+              src="./assets/img/illustrations/dog.png"
+              alt=""
+              class="filters__img"
+            />
+            <p class="filters__text">
+              <strong class="filters__text-strong">3.</strong> Do you have pets?
+              Do they <strong class="filters__text-strong">chew</strong> plants?
+            </p>
+            <select class="filters__options" name="pets">
+              <option selected disabled hidden>Select...</option>
+              <option value="true">True</option>
+              <option value="false">False</option>
+            </select>
+          </li>
+        </ul>
+      </div>
+      <div class="content__results results">
+        <div class="results__text-empty"></div>
+        <img src="" alt="" class="results__img-empty" />
+      </div>
+    </main>
     <footer class="footer"></footer>
   </body>
 </html>
