@@ -1,0 +1,64 @@
+.header {
+  width: 100%;
+  height: 350px;
+  background-color: #75BC97;
+  background-image: url(../img/hero/desktop/left-leaves.png), url(../img/hero/desktop/plantperson.png), url(../img/hero/desktop/right-leaves.png);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: left center, 69% 30%, right center;
+  background-size: 59% 100%, auto 82%, 30% 100%;
+  transition: all 1s;
+}
+@media (max-width: 425px) {
+  .header {
+    height: 375px;
+    background-image: url(../img/hero/mobile/mobile-leaves.png), url(../img/hero/mobile/mobile-plantperson.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top center, bottom center;
+    background-size: 100% 68%, auto 44%;
+  }
+}
+.header__content {
+  display: flex;
+  width: 70%;
+  margin: auto;
+  height: 100%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  transition: all 1s;
+}
+@media (max-width: 425px) {
+  .header__content {
+    width: 85%;
+    height: 69%;
+  }
+}
+.header__p {
+  color: white;
+}
+.header__title {
+  color: white;
+  font-size: 50px;
+  width: 30%;
+  font-weight: 700;
+  transition: all 1s;
+}
+@media (max-width: 425px) {
+  .header__title {
+    font-size: 25px;
+    width: 55%;
+    letter-spacing: 1.3px;
+  }
+}
+.header__arrow-down {
+  width: 25px;
+}
+@media (max-width: 425px) {
+  .header__arrow-down {
+    width: 15px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
