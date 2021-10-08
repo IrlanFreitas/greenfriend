@@ -76,10 +76,12 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   row-gap: 10px;
   column-gap: 10px;
-  grid-template-areas: "card card card";
+  grid-template-areas: "1fr 1fr 1fr";
 }
 .content .filters__card {
-  grid-area: "card";
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .content .filters__img {
   height: 75px;
@@ -100,39 +102,125 @@ body {
   color: #A8A8A8;
 }
 .content .filters select {
-  padding-right: 10px;
+  margin-left: 0;
 }
 .content .filters .invert {
   transform: rotateY(180deg);
 }
 .content .results {
+  min-height: 1000px;
+  background-color: #F2F2F2;
+}
+.content .results .favorite {
+  background-color: #75BC97;
+  position: absolute;
+  display: flex;
+  left: 0;
+  top: 50px;
+  width: 40%;
+  height: 8%;
+  box-sizing: border-box;
+  padding-left: 20px;
+  align-items: center;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0px 10px 28px rgba(0, 0, 0, 0.18);
+  align-items: flex-start;
+}
+.content .results .favorite__text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: white;
+  margin-top: 7px;
+}
+.content .results__title {
+  padding: 30px 0;
+}
+.content .results__img {
+  width: 158px;
+  height: 78px;
+}
+.content .results__text {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 55px;
+  line-height: 67px;
+  color: #0C261C;
+}
+.content .results__container {
   width: 70%;
   margin: auto;
   margin-bottom: 50px;
 }
-.content .results .card {
-  height: 100%;
-  background-color: green;
+.content .results__card {
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: white;
   margin: auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+}
+.content .results .card__title, .content .results .card__value {
+  color: #1E6B4E;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 28px;
+}
+.content .results .card__status {
+  display: flex;
+  justify-content: space-between;
+}
+.content .results .card__icon {
+  width: 20px;
+  height: 20px;
 }
 .content .results .card__img {
-  width: 10%;
+  width: 100px;
+  height: 150px;
+  margin: auto;
 }
 .content .results .card-rarely {
+  position: relative;
   grid-area: card;
-  margin: auto;
-  background-color: blue;
+}
+.content .results .card-rarely .card__title {
+  font-size: 35px;
+  line-height: 37px;
+}
+.content .results .card-rarely .card__value {
+  font-size: 24px;
+  line-height: 28px;
+}
+.content .results .card-rarely .card__img {
+  width: 300px;
+  height: 350px;
+}
+.content .results .card-rarely .card__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 15%;
+}
+.content .results .card-rarely .card__status {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
 }
 .content .results__cards {
   display: grid;
   column-gap: 10px;
   row-gap: 10px;
-  grid-template-columns: 30%;
-  grid-template-areas: "card card 1fr 1fr" "card card 1fr 1fr" ". . . .";
-}
-.content .results__card {
-  width: 200px;
-  height: 300px;
+  height: calc(100% - 350px);
+  height: 700px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "card card 1fr 1fr" "card card 1fr 1fr" ". . 1fr 1fr";
 }
 .content .empty {
   background-color: #F2F2F2;
