@@ -81,10 +81,11 @@ body {
 }
 
 .content {
-    width: 70%;
-    margin: auto;
 
     .filters {
+        width: 70%;
+        margin: auto;
+        margin-bottom: 50px;
 
         &__cards {
             margin-top: 50px;
@@ -127,6 +128,40 @@ body {
 
         .invert {
             transform: rotateY(180deg);
+        }
+    }
+
+    .results {
+        
+    }
+
+    .empty {
+
+        background-color: #F2F2F2;
+
+        &__title {
+            font-weight: bold;
+            font-size: 45px;
+            line-height: 55px;
+            color: #A9A9A9;
+        }
+
+        &__container {
+            width: 70%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            padding: 50px 0;
+            justify-content: flex-start
+        }
+
+        &__img {
+            margin: 0 auto;
+        }
+
+        &__p {
+            font-size: 16px;
+            margin: 10px 0;
         }
     }
 }

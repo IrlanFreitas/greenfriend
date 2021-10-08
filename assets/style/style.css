@@ -65,9 +65,10 @@ body {
   }
 }
 
-.content {
+.content .filters {
   width: 70%;
   margin: auto;
+  margin-bottom: 50px;
 }
 .content .filters__cards {
   margin-top: 50px;
@@ -103,6 +104,30 @@ body {
 }
 .content .filters .invert {
   transform: rotateY(180deg);
+}
+.content .empty {
+  background-color: #F2F2F2;
+}
+.content .empty__title {
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 55px;
+  color: #A9A9A9;
+}
+.content .empty__container {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  padding: 50px 0;
+  justify-content: flex-start;
+}
+.content .empty__img {
+  margin: 0 auto;
+}
+.content .empty__p {
+  font-size: 16px;
+  margin: 10px 0;
 }
 
 /*# sourceMappingURL=style.css.map */
