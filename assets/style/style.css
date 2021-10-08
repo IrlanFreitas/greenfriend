@@ -105,6 +105,35 @@ body {
 .content .filters .invert {
   transform: rotateY(180deg);
 }
+.content .results {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 50px;
+}
+.content .results .card {
+  height: 100%;
+  background-color: green;
+  margin: auto;
+}
+.content .results .card__img {
+  width: 10%;
+}
+.content .results .card-rarely {
+  grid-area: card;
+  margin: auto;
+  background-color: blue;
+}
+.content .results__cards {
+  display: grid;
+  column-gap: 10px;
+  row-gap: 10px;
+  grid-template-columns: 30%;
+  grid-template-areas: "card card 1fr 1fr" "card card 1fr 1fr" ". . . .";
+}
+.content .results__card {
+  width: 200px;
+  height: 300px;
+}
 .content .empty {
   background-color: #F2F2F2;
 }

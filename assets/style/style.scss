@@ -82,6 +82,7 @@ body {
 
 .content {
 
+
     .filters {
         width: 70%;
         margin: auto;
@@ -132,7 +133,49 @@ body {
     }
 
     .results {
-        
+
+        width: 70%;
+        margin: auto;
+        margin-bottom: 50px;
+
+        .card {
+
+            // width: 80%;
+            // width: 100px;
+            height: 100%;
+            background-color: green;
+            margin: auto;
+
+            &__img {
+                width: 10%;
+            }
+
+            &-rarely {
+                grid-area: card;
+                margin: auto;
+                // width: 90%;
+                // height: 100%;
+                background-color: blue;
+            }
+        }
+
+        &__cards {
+            display: grid;
+            column-gap: 10px;
+            row-gap: 10px;
+            // grid-template-rows: 400px;
+            grid-template-columns: 30%;
+
+            grid-template-areas:
+                "card card 1fr 1fr"
+                "card card 1fr 1fr"
+                ". . . .";
+        }
+
+        &__card {
+            width: 200px;
+            height: 300px;
+        }
     }
 
     .empty {
