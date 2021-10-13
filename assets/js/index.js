@@ -39,13 +39,13 @@ const picks = () => {
                 resultsCardsContainer.innerHTML = "";
                 if (data.length !== 0) {
                     emptyContainer.style.display = "none"
-                    resultsContainer.style.display = "block"
+                    resultsContainer.style.display = "inline-block"
 
                     data.forEach(item => {
                         createCard(item)
                     });
                 } else {
-                    emptyContainer.style.display = "block"
+                    emptyContainer.style.display = "inline-block"
                     resultsContainer.style.display = "none"
                 }
 
